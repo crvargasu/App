@@ -4,6 +4,7 @@ import MapView from 'react-native-maps';
 import * as Location from 'expo-location';
 import * as Permissions from 'expo-permissions';
 import Constants from 'expo-constants';
+import Search from "./Search/index";
 
 const WIDTH=Dimensions.get('window').width
 
@@ -44,6 +45,7 @@ export default class Mapa extends React.Component {
         <View style={{flex: 1}}>
 
         <TouchableOpacity style={styles.button} onPress={this.onPress}>
+
         <Image source={require('../assets/arrow.png')}
         
           style = {{width:50, height:50}} />
@@ -58,6 +60,7 @@ export default class Mapa extends React.Component {
           showsCompass={true}
           showsUserLocation={true}>
        </MapView> 
+       <Search/>
        </View>
       );
     }
